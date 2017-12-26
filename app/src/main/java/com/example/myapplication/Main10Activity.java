@@ -24,7 +24,7 @@ public class Main10Activity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         //加载布局
         setContentView(R.layout.activity_main10);
-        //初始化控件
+        //初始化控件uogyuiyt
         initView();
     }
 
