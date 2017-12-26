@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +19,7 @@ public class Main9Activity extends AppCompatActivity implements View.OnClickList
     private Button bt_fresco_loadsmall;
     private LinearLayout ll_fresco;
     private SimpleDraweeView simpleDraweeView;
+    private Button next_ten;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,13 +53,19 @@ public class Main9Activity extends AppCompatActivity implements View.OnClickList
                 // 将simpleDraweeView控件对象,添加到线性布局中
                 ll_fresco.addView(simpleDraweeView);
                 break;
+            case R.id.next_ten:
+                Intent intent = new Intent(Main9Activity.this,Main10Activity.class);
+                startActivity(intent);
+                break;
         }
     }
 
     private void initView() {
         bt_fresco_loadsmall = (Button) findViewById(R.id.bt_fresco_loadsmall);
+        next_ten = (Button) findViewById(R.id.next_ten);
         ll_fresco = (LinearLayout) findViewById(R.id.ll_fresco);
 
         bt_fresco_loadsmall.setOnClickListener(this);
+        next_ten.setOnClickListener(this);
     }
 }
