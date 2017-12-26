@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.example.myapplication"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //Fresco,无论使用哪个模块的功能,都必须要添加的基础依赖
+    //下面的依赖根据需求,用到哪个模块,就导入对应的依赖即可.
+    // 仅支持 WebP 静态图，需要添加
+    // 支持 GIF 动图，需要添加
+    // 支持 WebP 静态图及 WebP 动图，需要添加
+
+    // 在 API < 14 上的机器支持 WebP 时，需要添加 compile'com.facebook.fresco:webpsupport:0.14.1'
+    //找控件
+    //找控件
+    compile 'com.facebook.fresco:webpsupport:0.14.1'
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.facebook.fresco:fresco:0.14.1'
+    compile 'com.facebook.fresco:animated-gif:0.14.1'
+    compile 'com.facebook.fresco:animated-webp:0.14.1'
+    compile 'com.facebook.fresco:animated-base-support:0.14.1'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+}
