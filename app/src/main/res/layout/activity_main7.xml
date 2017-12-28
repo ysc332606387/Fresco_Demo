@@ -20,6 +20,7 @@
         android:layout_marginTop="48dp"
         android:text="修内存中改图片大小" />
     <Button
+        android:visibility="gone"
         android:id="@+id/next_eight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -33,6 +33,10 @@ dependencies {
     // 在 API < 14 上的机器支持 WebP 时，需要添加 compile'com.facebook.fresco:webpsupport:0.14.1'
     //找控件
     //找控件
+
+// 支持 GIF 动图，需要添加
+
+
     compile 'com.facebook.fresco:webpsupport:0.14.1'
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
@@ -40,11 +44,7 @@ dependencies {
     compile 'com.facebook.fresco:animated-webp:0.14.1'
     compile 'com.facebook.fresco:animated-base-support:0.14.1'
     compile 'com.jakewharton:butterknife:8.8.1'
-
-// 支持 GIF 动图，需要添加
     compile 'com.facebook.fresco:animated-gif:0.14.1'
-
-
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }
